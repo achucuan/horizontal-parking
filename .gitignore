@@ -1,0 +1,7 @@
+.idea/
+/project/vendor
+/project/storage/
+/project/.env
+/project/.env.*
+/project/artisan
+/project/composer.lock
