@@ -3,6 +3,10 @@
 namespace App\Models;
 
 abstract class Slot extends Model 
-	protected function 
+	
+	protected abrstact function returnSlot()
+	{
+		return 'abrstract slot';
+	}
 
 } 

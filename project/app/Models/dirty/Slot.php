@@ -4,7 +4,7 @@ namespace App\Models\dirty;
 
 class Slot extends Model 
 	
-	protected function slot()
+	protected function returnSlot()
 	{
 		return 'dirty slot';
 	}
