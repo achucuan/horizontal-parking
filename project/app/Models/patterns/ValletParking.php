@@ -13,14 +13,15 @@ class ValletParking extends Slot
 		$this->slot = $slot;
 	}
 
-	protected function 	decorateSlot()
+	protected function 	decorateValletParkingSlot()
 	{
 		$this->slot->text .= '|Vallet Parking added';
+		return $this->slot->text;
 	}
 
 	public function getText()
 	{
-		return $this->slot->text;
+		return $this->decorateValletParkingSlot();
 	}
 
 }
