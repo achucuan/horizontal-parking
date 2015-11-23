@@ -13,8 +13,13 @@ class CarWash extends Slot
 		$this->slot = $slot;
 	}
 
-	protected function 	decorateSlot()
+	protected function 	decorateCarWashSlot()
 	{
 		$this->slot->text .= '|Car Wash added';
+	}
+
+	public function getText()
+	{
+		return $this->decorateCarWashSlot();
 	}
 }
