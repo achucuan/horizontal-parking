@@ -2,11 +2,11 @@
 
 namespace App\Models\dirty;
 
-class Slot extends Model 
+class CarWashSlot extends Model 
 {
 	public function __construct()
 	{
-		$this->text = 'slot added';
+		$this->text = 'Slot withCar Wash added';
 	}
 
 	public function getText()

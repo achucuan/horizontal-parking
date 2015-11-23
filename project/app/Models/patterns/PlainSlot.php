@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Models\dirty;
+namespace App\Models\patterns;
 
-class Slot extends Model 
+use App\Models\patterns\Slot; 
+
+class PlainSlot extends Slot 
 {
 	public function __construct()
 	{
@@ -14,4 +16,4 @@ class Slot extends Model
 		return $this->text;
 	}
 
-} 
+}
