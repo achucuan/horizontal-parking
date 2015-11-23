@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('index');
 });
+
+//dirty
+Route::group(['prefix' => 'dirty'], function(){
+    Route::post('/create-slot', 'SlotController@buildDirtySlot');
+
+});
+
+//patterns
+Route::group(['prefix' => 'patterns'], function(){
+    Route::post('/create-slot', 'SlotController@buildPatternSlot');
+
+});
