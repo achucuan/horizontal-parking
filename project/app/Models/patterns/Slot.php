@@ -1,13 +1,9 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\patterns;
 
 abstract class Slot extends Model 
-{
-	
-	protected abrstact function returnSlot()
-	{
-		return 'abrstract slot';
-	}
-
-} 
+{	
+	protected $text;
+	public abstract function getText();
+}
