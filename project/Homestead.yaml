@@ -12,7 +12,7 @@ keys:
     - ~/.ssh/id_rsa
 
 folders:
-    - map: "C:/sites/hparkinglot/project"
+    - map: "/sites/hparkinglot/project"
       to: "/home/vagrant/project"
 
 sites:
