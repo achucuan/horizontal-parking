@@ -4,3 +4,4 @@
 /project/.env
 /project/.env.*
 /project/composer.lock
+/project/.vagrant/
