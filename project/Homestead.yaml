@@ -12,19 +12,21 @@ keys:
     - ~/.ssh/id_rsa
 
 folders:
-    - map: "/sites/hparkinglot/project"
+    - map: "./"
       to: "/home/vagrant/project"
 
 sites:
-    - map: homestead.app
+    - map: hparking.app
       to: "/home/vagrant/project/public"
 
 databases:
-    - homestead
+    - hparking
 
 variables:
     - key: APP_ENV
       value: local
+    - key: API_KEY
+      value: O4mJtCQ5AYWPB4VgEviJbNwHeXwlFckW
 
 # blackfire:
 #     - id: foo

@@ -24,5 +24,6 @@ Route::group(['prefix' => 'dirty'], function(){
 //patterns
 Route::group(['prefix' => 'patterns'], function(){
     Route::post('/create-slot', 'SlotController@buildPatternSlot');
-
 });
+
+Route::get('/get-members', 'CarPoolMembers@index');
