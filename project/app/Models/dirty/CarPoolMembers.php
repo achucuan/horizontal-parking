@@ -6,29 +6,37 @@ use Illuminate\Database\Eloquent\Model;
 
 class CarPoolMembers extends Model
 {
-    private $carPool = [
+    private $carPools = [
         [
-            'name' => 'The Walking Dead.',
-            'members' => ['name'=> 'Rick', 'name'=> 'Carl', 'name'=> 'Glenn']
+            'group' => 'The Walking Dead.',
+            'driver' => 'Rick',
+            'passengers' => ['Carl', 'Daryl']
         ],
         [
-            'name' => 'Yuber',
-            'members' => ['name'=> 'Elisiña', 'name'=> 'Tadeo Senpai', 'name'=> 'Hikuri']
+            'group' => 'Yuber',
+            'driver' => 'Elisa',
+            'passengers' => ['Un troll', 'Esther', 'Hikuri']
         ],
         [
-            'name' => 'Yoyoyo! le pago el taxi..',
-            'members' => ['name'=> 'Rick', 'name'=> 'Carl', 'name'=> 'Daryl']
+            'group' => 'The KKK',
+            'driver' => 'Karen',
+            'passengers' => ['Karla', 'Katia']
+        ],
+        [
+            'group' => 'Cho cho cho fer para el taxi',
+            'driver' => 'Ilse',
+            'passengers' => ['Audrey', 'Laura', 'Barbara']
         ]
     ];
 
-    function getCarPool()
+    /**
+     * getCarPool
+     * Returns full car pool feed
+     * @return array
+     */
+    public function getCarPool()
     {
-        return $this->carPool;
-    }
-
-    function getCarPoolMembers()
-    {
-        return $this->carPoolMembers;
+        return $this->carPools;
     }
 
 }

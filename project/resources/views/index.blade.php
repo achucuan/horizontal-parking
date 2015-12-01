@@ -9,7 +9,10 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Horizontal Parking</div>
+                @yield('title')<div class="title">Horizontal Parking</div>
+
+                @yield('content')
+
             </div>
         </div>
     </body>

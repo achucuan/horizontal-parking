@@ -12,16 +12,21 @@ body {
 }
 
 .container {
-    text-align: center;
     display: table-cell;
     vertical-align: middle;
 }
 
 .content {
-    text-align: center;
-    display: inline-block;
+    display: block;
+    max-width: 912px;
+    margin: 0 auto;
 }
 
 .title {
     font-size: 96px;
+    text-align: center;
+}
+
+ul {
+    font-family: arial;
 }
