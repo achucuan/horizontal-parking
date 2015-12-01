@@ -3,7 +3,7 @@
 namespace App\Models\patterns;
 
 class StrategyContext {
-   private ReportsStrategy $strategy;
+   private $strategy;
 
    public function __construct(ReportsStrategy $strategy){
       $this->strategy = $strategy;
