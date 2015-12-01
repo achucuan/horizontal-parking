@@ -2,7 +2,7 @@
 
 namespace App\Models\patterns;
 
-use App\Models\patterns\Slot; 
+use App\Models\interfaces\Slot;
 
 class PlainSlot extends Slot 
 {
