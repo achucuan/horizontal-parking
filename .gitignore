@@ -5,3 +5,5 @@
 /project/.env.*
 /project/composer.lock
 /project/.vagrant/
+/vendor/
+.vagrant/
