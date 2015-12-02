@@ -2,14 +2,11 @@
 
 namespace App\Models\patterns;
 
-use App\Models\interfaces\Slot;
+use App\Models\patterns\Slot;
 
 class PlainSlot extends Slot 
 {
-	public function __construct()
-	{
-		$this->text = 'slot added';
-	}
+	//protected $text = 'slot added';
 
 	public function getText()
 	{

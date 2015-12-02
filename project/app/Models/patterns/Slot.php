@@ -2,8 +2,8 @@
 
 namespace App\Models\patterns;
 
-abstract class Slot extends Model 
+abstract class Slot
 {	
-	protected $text;
+	protected $text = 'slot added';
 	public abstract function getText();
 }

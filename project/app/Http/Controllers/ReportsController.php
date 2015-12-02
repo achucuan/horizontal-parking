@@ -15,12 +15,12 @@ class ReportsController extends Controller
 	public function makeHtml()
 	{
 		$report = new StrategyContext(new ReportHtml());
-		$report->doReport();
+		echo $report->executeStrategy();
 	}
 
 	public function makepdf()
 	{
 		$report = new StrategyContext(new ReportPdf());
-		$report->doReport();
+		echo $report->executeStrategy();
 	}
 }
