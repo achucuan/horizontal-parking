@@ -33,6 +33,9 @@ Route::group(['prefix' => 'patterns'], function(){
     Route::get('/factory', function(){
         return view('factory');
     });
+    Route::get('/factory-dirty', function(){
+        return view('factory.dirty');
+    });
 
     //Observer
     Route::get('/observer', function(){

@@ -1,11 +1,18 @@
 var SlotFactory = (function(){
-				
+	var PLAIN = "plain";
+	var CARPOOL = "carpool";
+	var availableSpaces = 4;
+	var carpoolSpaces = 1;
+	
 	var PlainSlot = function(options){
 		this.name = options.name || 'PlainSlot';
+		availableSpaces--;
 	};
 
 	var CarPoolSlot = function(options){
 		this.name = options.name || 'CarPoolSlot';
+		availableSpaces--;
+		carpoolSpaces--;
 	};
 
 	// Skeleton factory
@@ -15,16 +22,24 @@ var SlotFactory = (function(){
 	Factory.prototype.createSlot = function ( options ) {
 		options = options || {};
 		switch(options.slotType){
-			case "carpool":
+			case CARPOOL:
 				this.slotClass = CarPoolSlot;
 				break;
-			case "plain":
+			case PLAIN:
 			default:
 				this.slotClass = PlainSlot;
 				break;
 		}
 
+		if(this.checkSpaces(options.slotType) < 1) throw new Error('No spaces left');
+
 		return new this.slotClass( options );
+	};
+
+	// Placeholder for an ajax call to know if we have an available space
+	Factory.prototype.checkSpaces = function ( type ) {
+
+		return type == CARPOOL ? carpoolSpaces : availableSpaces;
 	};
 
 	return Factory;
@@ -44,5 +59,5 @@ var carpool = slotFactory.createSlot({slotType: "carpool"});
 console.log(carpool);
 
 // Plain type
-var anotherplain = slotFactory.createSlot();
-console.log(anotherplain);
+var anotherPlain = slotFactory.createSlot();
+console.log(anotherPlain);
