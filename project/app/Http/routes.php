@@ -28,6 +28,11 @@ Route::group(['prefix' => 'patterns'], function(){
     Route::get('/create-slot', 'SlotController@buildPatternSlot');
     Route::get('/make-html', 'ReportsController@makeHtml');
     Route::get('/make-pdf', 'ReportsController@makePdf');
+
+    //Factory
+    Route::get('/factory', function(){
+        return view('factory');
+    });
 });
 
 Route::get('/car-pool/driver', 'CarPoolMembers@getDriver');
