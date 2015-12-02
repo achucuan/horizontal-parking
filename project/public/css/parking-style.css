@@ -34,6 +34,8 @@ ul {
 dl.main-nav{
     font-family: arial;
     color: #848484;
+    margin: 20px auto;
+    width: 840px;
 }
 
 .main-nav dt{

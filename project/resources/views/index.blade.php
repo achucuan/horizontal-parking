@@ -13,7 +13,11 @@
 
                 @include('nav.main-nav');
 
+                @section('content')
+                @stop
             </div>
         </div>
+
+        @yield('scripts')
     </body>
 </html>
