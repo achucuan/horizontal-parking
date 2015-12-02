@@ -2,24 +2,12 @@
 
 namespace App\Models\patterns;
 
-use App\Models\patterns\Slot; 
+use App\Models\patterns\SlotDecorator;
 
-class CarWash extends Slot 
+class CarWash extends SlotDecorator 
 {
-	protected $slot;
-
-	public function __construct(Slot $slot)
-	{
-		$this->slot = $slot;
-	}
-
-	protected function 	decorateCarWashSlot()
-	{
-		$this->slot->text .= '|Car Wash added';
-	}
-
 	public function getText()
 	{
-		return $this->decorateCarWashSlot();
+		return $this->slot->getText() . '|Car Wash added';
 	}
 }

@@ -17,13 +17,15 @@ Route::get('/', function () {
 
 //dirty
 Route::group(['prefix' => 'dirty'], function(){
-    Route::post('/create-slot', 'SlotController@buildDirtySlot');
+    Route::get('/create-slot', 'SlotController@buildDirtySlot');
 
 });
 
 //patterns
 Route::group(['prefix' => 'patterns'], function(){
-    Route::post('/create-slot', 'SlotController@buildPatternSlot');
+    Route::get('/create-slot', 'SlotController@buildPatternSlot');
+    Route::get('/make-html', 'ReportsController@makeHtml');
+    Route::get('/make-pdf', 'ReportsController@makePdf');
 });
 
 Route::get('/car-pool/driver', 'CarPoolMembers@getDriver');

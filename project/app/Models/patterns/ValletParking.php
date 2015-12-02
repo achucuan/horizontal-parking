@@ -2,26 +2,13 @@
 
 namespace App\Models\patterns;
 
-use App\Models\patterns\Slot; 
+use App\Models\patterns\SlotDecorator; 
 
-class ValletParking extends Slot
+class ValletParking extends SlotDecorator
 {
-	protected $slot;
-
-	public function __construct(Slot $slot)
-	{
-		$this->slot = $slot;
-	}
-
-	protected function 	decorateValletParkingSlot()
-	{
-		$this->slot->text .= '|Vallet Parking added';
-		return $this->slot->text;
-	}
-
 	public function getText()
 	{
-		return $this->decorateValletParkingSlot();
+		return $this->slot->getText() . '|Vallet Parking added';
 	}
 
 }

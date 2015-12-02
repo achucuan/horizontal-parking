@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models\patterns;
+use App\Models\interfaces\ReportsStrategy;
 
 class StrategyContext {
    private $strategy;
