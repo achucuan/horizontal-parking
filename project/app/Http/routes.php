@@ -18,6 +18,8 @@ Route::get('/', function () {
 //dirty
 Route::group(['prefix' => 'dirty'], function(){
     Route::get('/create-slot', 'SlotController@buildDirtySlot');
+    Route::get('/make-html', 'ReportsController@makeDirtyHtml');
+    Route::get('/make-pdf', 'ReportsController@makeDirtyPdf');
 
 });
 
