@@ -33,6 +33,11 @@ Route::group(['prefix' => 'patterns'], function(){
     Route::get('/factory', function(){
         return view('factory');
     });
+
+    //Observer
+    Route::get('/observer', function(){
+        return view('observer');
+    });
 });
 
 Route::get('/car-pool/driver', 'CarPoolMembers@getDriver');

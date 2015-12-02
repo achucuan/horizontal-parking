@@ -9,9 +9,9 @@
     <body>
         <div class="container">
             <div class="content">
-                @yield('title')<div class="title">Horizontal Parking</div>
+                @yield('title')<div class="title">Design Patterns FTW</div>
 
-                @yield('content')
+                @include('nav.main-nav');
 
             </div>
         </div>

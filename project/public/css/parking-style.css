@@ -30,3 +30,12 @@ body {
 ul {
     font-family: arial;
 }
+
+dl.main-nav{
+    font-family: arial;
+    color: #848484;
+}
+
+.main-nav dt{
+    padding-top: 1em;
+}
