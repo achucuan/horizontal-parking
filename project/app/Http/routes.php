@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 //dirty
 Route::group(['prefix' => 'dirty'], function(){
-    Route::post('/create-slot', 'SlotController@buildDirtySlot');
+    Route::get('/create-slot', 'SlotController@buildDirtySlot');
 
 });
 

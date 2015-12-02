@@ -2,11 +2,11 @@
 
 namespace App\Models\dirty;
 
-class ValletParkingSlot extends Model 
+class ValletParkingSlot
 {
 	public function __construct()
 	{
-		$this->text = 'Slot with Valler Parking added';
+		$this->text = 'Slot with Valler Parking added|';
 	}
 
 	public function getText()

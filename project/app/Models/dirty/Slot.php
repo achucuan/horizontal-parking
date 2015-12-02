@@ -2,11 +2,11 @@
 
 namespace App\Models\dirty;
 
-class Slot extends Model 
+class Slot
 {
 	public function __construct()
 	{
-		$this->text = 'slot added';
+		$this->text = 'slot added|';
 	}
 
 	public function getText()
