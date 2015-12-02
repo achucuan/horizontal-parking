@@ -25,7 +25,10 @@ Route::group(['prefix' => 'dirty'], function(){
 
 //patterns
 Route::group(['prefix' => 'patterns'], function(){
+    //Decorator
     Route::get('/create-slot', 'SlotController@buildPatternSlot');
+
+    //Strategy
     Route::get('/make-html', 'ReportsController@makeHtml');
     Route::get('/make-pdf', 'ReportsController@makePdf');
 
@@ -34,15 +37,18 @@ Route::group(['prefix' => 'patterns'], function(){
         return view('factory');
     });
     Route::get('/factory-dirty', function(){
-        return view('factory.dirty');
+        return view('factory-dirty');
     });
 
     //Observer
     Route::get('/observer', function(){
         return view('observer');
     });
+
+    //Facade
+    Route::get('/facade/add-member', 'CarPoolMembers@addMemberToParty');
+    Route::get('/facade/order', 'CarPoolMembers@getMembers');
+    Route::get('/facade', 'CarPoolMembers@index');
+
 });
 
-Route::get('/car-pool/driver', 'CarPoolMembers@getDriver');
-Route::get('/car-pool/members', 'CarPoolMembers@getMembers');
-Route::get('/car-pool', 'CarPoolMembers@index');

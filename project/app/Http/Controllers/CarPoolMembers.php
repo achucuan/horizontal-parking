@@ -20,18 +20,19 @@ class CarPoolMembers extends Controller
     {
         $carPoolMembers = new CarPoolMembersDirty();
 
-        //@todo pass object to view and return view
-        dd($carPoolMembers->getCarPool());
-    }
-
-    public function getDriver()
-    {
-        return CarPoolMembersFacade::getOwner();
+        $carPoolMembers = $carPoolMembers->getCarPool();
+        return view('facade', ['carPoolMembers' => $carPoolMembers]);
     }
 
     public function getMembers()
     {
         $carPoolMembers = CarPoolMembersFacade::getMembers();
-        return view('members', compact('carPoolMembers'));
+        return view('facade', compact('carPoolMembers'));
+    }
+
+    public function addMemberToParty()
+    {
+        $carPoolMembers = CarPoolMembersFacade::addMemberParty('John Snow', 'Starks');
+        return view('facade', compact('carPoolMembers'));
     }
 }

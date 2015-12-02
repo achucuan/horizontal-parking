@@ -13,8 +13,7 @@
 
                 @include('nav.main-nav');
 
-                @section('content')
-                @stop
+                @yield('content')
             </div>
         </div>
 

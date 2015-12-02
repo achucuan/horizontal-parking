@@ -10,7 +10,7 @@ class CarPoolMembers extends Model
         [
             'group' => 'The Walking Dead.',
             'driver' => 'Rick',
-            'passengers' => ['Carl', 'Daryl']
+            'passengers' => ['Daryl', 'Carl']
         ],
         [
             'group' => 'Yuber',
@@ -26,6 +26,11 @@ class CarPoolMembers extends Model
             'group' => 'Cho cho cho fer para el taxi',
             'driver' => 'Ilse',
             'passengers' => ['Audrey', 'Laura', 'Barbara']
+        ],
+        [
+            'group' => 'Starks',
+            'driver' => 'Eddard',
+            'passengers' => ['Sansa', 'Arya', 'Robb']
         ]
     ];
 
@@ -34,7 +39,7 @@ class CarPoolMembers extends Model
      * Returns full car pool feed
      * @return array
      */
-    public function getCarPool()
+    public function &getCarPool()
     {
         return $this->carPools;
     }
